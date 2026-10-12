@@ -128,3 +128,17 @@ systemctl --failed
 - 서비스 및 프로세스 관리
 - 디스크 및 LVM 실습
 - 네트워크 및 SSH 운영
+
+## 7. 실습 결과 캡처
+
+### 7.1 호스트명 및 운영체제 확인
+![Hostname](screenshots/01-hostnamectl.png)
+
+### 7.2 디스크 및 LVM 구성 확인
+![Disk](screenshots/02-disk.png)
+
+### 7.3 메모리 확인
+![Memory](screenshots/03-memory.png)
+
+### 7.4 네트워크 인터페이스 확인
+![Network](screenshots/04-network.png)
