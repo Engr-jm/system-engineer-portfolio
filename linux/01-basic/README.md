@@ -132,7 +132,7 @@ systemctl --failed
 ## 7. 실습 결과 캡처
 
 ### 7.1 호스트명 및 운영체제 확인
-![Hostname](screenshots/01-hostnamectl.png)
+![Hostname](screenshots/01-hostname.png)
 
 ### 7.2 디스크 및 LVM 구성 확인
 ![Disk](screenshots/02-disk.png)
