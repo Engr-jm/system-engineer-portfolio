@@ -1,307 +1,78 @@
-
 # System Engineer Portfolio
 
-Linux 기반 시스템 운영과 인프라 구축을 단계적으로 실습한 프로젝트입니다.
-
-Linux 서버 구축을 시작으로 Network, Shell, Docker, Kubernetes까지 확장하며
-서버 운영과 장애 대응 과정을 기록합니다.
-
----
-
-## 1. Project Overview
-
-### 목표
-
-* Linux 서버 운영 능력 향상
-* 네트워크 기반 서버 통신 이해
-* Shell Script를 이용한 운영 자동화
-* Docker 기반 서비스 운영
-* Kubernetes 기반 컨테이너 서비스 배포
-* 장애 상황 재현 및 원인 분석
-* 문제 해결 과정 문서화
-
-### Project Flow
-
-Linux Server
-→ Network
-→ Shell
-→ Docker
-→ Kubernetes
-→ Troubleshooting
-
----
-
-## 2. Technology
-
-| Category      | Technology                                  |
-| ------------- | ------------------------------------------- |
-| OS            | RHEL / Linux                                |
-| Network       | TCP/IP, Subnet, Routing, DNS, SSH, Firewall |
-| Shell         | Bash                                        |
-| Container     | Docker                                      |
-| Orchestration | Kubernetes                                  |
-| Cloud         | AWS                                         |
-| Documentation | GitHub / Markdown                           |
-
----
-
-## 3. Infrastructure
-
-프로젝트 전체 환경은 Linux 서버를 기반으로 구성하며,
-Network와 서버 운영 환경 위에 Docker 및 Kubernetes 환경을 단계적으로 확장합니다.
-
-### Server
-
-| Server  | Role                   |
-| ------- | ---------------------- |
-| infra01 | Management / Shell     |
-| infra02 | Application / Linux    |
-| infra03 | Container / Kubernetes |
-
-> 실제 서버 구성과 IP 정보는 `architecture/network-design.md`에서 관리합니다.
-
----
-
-## 4. Architecture
-
-전체 인프라 구성은 다음과 같은 단계로 확장합니다.
-
-```text
-Client
-   │
-   ▼
-Network
-   │
-   ├── infra01
-   │    └── Management / Shell
-   │
-   ├── infra02
-   │    └── Linux / Application
-   │
-   └── infra03
-        └── Docker / Kubernetes
-```
-
-구성도:
-
-`architecture/topology.png`
-
-상세 네트워크 구성:
-
-`architecture/network-design.md`
-
----
-
-# 5. Linux
-
-Linux 서버를 직접 구성하고 운영하면서
-시스템 엔지니어에게 필요한 기본적인 서버 관리 능력을 실습합니다.
-
-### Linux Topics
-
-* Linux 기본 환경 구성
-* 사용자 / 그룹 관리
-* 파일 및 디렉터리 권한
-* Process 관리
-* systemd 서비스 관리
-* Storage / 파일시스템
-* Network 설정
-* SSH
-* Firewall
-* SELinux
-* 로그 분석
-* 장애 대응
-
-상세 내용:
-
-`linux/README.md`
-
----
-
-# 6. Network
-
-Linux 서버 간 통신을 구성하면서
-IP, Subnet, Routing, DNS, SSH, Firewall의 관계를 실습합니다.
-
-### Topics
-
-* IP Address
-* Subnet
-* Routing
-* DNS
-* SSH
-* Port
-* Firewall
-* Server-to-Server Communication
-
-상세 내용:
-
-`network/README.md`
-
----
-
-# 7. Shell
-
-Linux 운영 작업을 Bash Script로 자동화합니다.
-
-### Topics
-
-* Bash 기본 문법
-* 변수
-* 조건문
-* 반복문
-* 함수
-* 명령어 결과 처리
-* 서버 상태 점검
-* 로그 관리
-* 운영 자동화
-
-상세 내용:
-
-`shell/README.md`
-
----
-
-# 8. Docker
-
-Linux 서버 환경에서 Docker를 이용해 서비스를 컨테이너로 운영합니다.
-
-### Topics
-
-* Image
-* Container
-* Dockerfile
-* Volume
-* Network
-* Port Mapping
-* Docker Compose
-
-상세 내용:
-
-`docker/README.md`
-
----
-
-# 9. Kubernetes
-
-Docker 기반 컨테이너 환경을 Kubernetes로 확장합니다.
-
-### Topics
-
-* Pod
-* Deployment
-* Service
-* ConfigMap
-* Secret
-* Volume
-* Ingress
-* Resource
-
-상세 내용:
-
-`kubernetes/README.md`
-
----
-
-# 10. Troubleshooting
-
-실제 운영 환경에서 발생할 수 있는 장애를 의도적으로 발생시키고
-원인 분석 및 복구 과정을 문서화합니다.
-
-### Linux
-
-* SSH 접속 장애
-* Service 장애
-* 권한 오류
-* Disk 부족
-* Network 오류
+## 프로젝트 소개
+
+VMware Fusion 기반 Rocky Linux 서버 구축을 시작으로 Linux 시스템 운영, 네트워크 관리, Shell Script 자동화, Docker 및 Kubernetes 환경까지 단계적으로 구축하는 시스템 엔지니어 포트폴리오입니다.
+
+단순히 명령어를 실행하는 것이 아니라 시스템 구성 목적, 구축 과정, 검증 결과, 장애 해결 과정을 기록하는 것을 목표로 합니다.
+
+## 1. 실습 환경
+
+| 구분 | 환경 |
+|---|---|
+| Host OS | macOS (MacBook M1 Air) |
+| Virtualization | VMware Fusion |
+| Guest OS | Rocky Linux 10.2 ARM64 |
+| Hostname | server01.example.com |
+| Network | VMware NAT |
+| Server IP | 192.168.76.10/24 |
+| Gateway | 192.168.76.2 |
+| DNS | 192.168.76.2 |
+| Remote Access | OpenSSH |
+
+## 2. 프로젝트 진행 현황
+
+### Linux 서버 구축
+
+- [x] Rocky Linux 설치 및 초기 설정
+- [x] root / admin 사용자 생성
+- [x] 호스트명 설정
+- [x] VMware NAT 네트워크 확인
+- [x] NetworkManager 연결 프로파일 백업
+- [x] 고정 IP 구성
+- [x] 게이트웨이 및 외부 네트워크 통신 검증
+- [x] DNS 이름 해석 확인
+- [x] SSH 서비스 실행 확인
+- [x] macOS에서 Linux 서버로 SSH 원격 접속
+- [ ] 방화벽 설정 및 관리
+- [ ] 사용자·그룹·파일 권한 관리
+- [ ] 디스크 및 LVM 관리
+- [ ] systemd 서비스 및 프로세스 관리
+
+### Shell Script 자동화
+
+- [ ] 시스템 자원 점검 스크립트
+- [ ] 로그 분석 및 관리
+- [ ] cron 기반 정기 점검
 
 ### Docker
 
-* Container 실행 실패
-* Port Mapping 오류
-* Volume 오류
-* Network 오류
+- [ ] Docker 설치 및 컨테이너 관리
+- [ ] Dockerfile 이미지 빌드
+- [ ] 볼륨 및 컨테이너 네트워크
+- [ ] Docker Compose 기반 서비스 구성
 
 ### Kubernetes
 
-* Pod 실행 실패
-* ImagePullBackOff
-* Service 접속 실패
-* Config 오류
+- [ ] Kubernetes 실습 환경 구성
+- [ ] Pod 및 Deployment
+- [ ] Service 및 Ingress
+- [ ] 장애 복구 및 스케일링
 
-장애 대응 문서:
+## 3. 실습 기록 기준
 
-`troubleshooting/`
+각 실습은 다음 항목을 중심으로 작성합니다.
 
----
+1. 실습 목적 및 환경
+2. 구성 과정과 사용 명령어
+3. 정상 작동 검증 결과
+4. 발생한 문제와 해결 과정
+5. 배운 점과 개선 사항
 
-# 11. Documentation Rule
+## 4. 장애 해결 기록
 
-각 실습은 다음 기준으로 기록합니다.
+실습 중 발생한 문제를 단순히 해결하는 데 그치지 않고 원인, 점검 명령어, 해결 방법, 재발 방지 방안을 정리합니다.
 
-### 1. Problem
+## 5. 프로젝트 목표
 
-어떤 문제를 해결하려고 했는가?
-
-### 2. Environment
-
-어떤 서버와 환경에서 실습했는가?
-
-### 3. Configuration
-
-어떤 설정을 적용했는가?
-
-### 4. Verification
-
-어떻게 정상 작동하는지 확인했는가?
-
-### 5. Troubleshooting
-
-어떤 문제가 발생했고 어떻게 해결했는가?
-
-### 6. Result
-
-최종적으로 무엇을 확인했는가?
-
----
-
-# 12. Project Roadmap
-
-```text
-[Phase 1]
-Linux Server
-    ↓
-[Phase 2]
-Network
-    ↓
-[Phase 3]
-Shell Automation
-    ↓
-[Phase 4]
-Docker
-    ↓
-[Phase 5]
-Kubernetes
-    ↓
-[Phase 6]
-Troubleshooting
-```
-
-현재 진행 단계:
-
-**Phase 1 - Linux Server**
-
----
-
-# 13. Key Learning
-
-이 프로젝트를 통해 단순한 명령어 사용을 넘어
-
-Linux Server
-→ Network
-→ Service
-→ Container
-→ Kubernetes
-
-로 이어지는 시스템 운영 구조를 이해하는 것을 목표로 합니다.
+Linux 서버 구축과 운영 역량을 바탕으로 자동화 및 컨테이너 운영 기술을 확장하고, 실제 수행한 작업을 재현 가능한 기술 문서로 정리하는 것을 목표로 합니다.
