@@ -256,3 +256,17 @@ Ping 및 ARP 검사 후 고정 IP를 설정하여 주소 충돌 위험을 줄였
 - firewalld를 이용한 접근 제어
 - 네트워크 장애 상황 재현 및 복구
 - 추가 가상머신을 이용한 서버 간 통신 검증
+
+## 10. 실습 결과 캡처
+
+### 10.1 고정 IP 설정
+![Static IP](screenshots/01-static-ip.png)
+
+### 10.2 라우팅 테이블 확인
+![Routing](screenshots/02-routing.png)
+
+### 10.3 네트워크 통신 및 DNS 검증
+![Connectivity](screenshots/03-connectivity.png)
+
+### 10.4 SSH 원격 접속 확인
+![SSH](screenshots/04-ssh.png)
