@@ -59,7 +59,7 @@ MacBook M1 Air (macOS)
 | 구분 | 진행 상태 |
 |---|---|
 | Linux 서버 구축 및 운영 | 완료 |
-| Shell Script 자동화 | 진행 예정 |
+| Shell Script 자동화 | 진행 중 (01~02 완료) |
 | Docker 컨테이너 환경 | 진행 예정 |
 | Kubernetes 운영 환경 | 진행 예정 |
 
@@ -194,13 +194,18 @@ LVM과 파일시스템은 서로 다른 계층으로 관리되며, 확장 후 �
 
 ### Shell Script 자동화
 
-- [x] 서버 CPU·메모리·디스크 사용률 점검 스크립트
+- [x] CPU·메모리·디스크 사용률 점검 스크립트
 - [x] 디스크 사용률 임계값 기반 WARNING 검증
-- [ ] 로그 검색 및 분석 자동화
+- [x] journalctl 기반 시스템 오류 로그 검색
+- [x] 오류 로그 개수 계산 및 상세 내용 출력
+- [x] 로그 조회 실패 처리 및 예외 상황 검증
 - [ ] cron 기반 정기 점검
-- [ ] 점검 결과 로그 파일 저장
+- [ ] 점검 결과 로그 파일 자동 저장
 
-완료한 실습: [01. 시스템 자원 점검 자동화](shell/01-system-monitor/README.md)
+**완료한 실습**
+
+- [01. Linux 시스템 자원 점검 자동화](shell/01-system-monitor/README.md)
+- [02. Linux 로그 분석 자동화](shell/02-log-analysis/README.md)
 
 ### Docker
 
