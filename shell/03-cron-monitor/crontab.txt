@@ -1,0 +1,1 @@
+*/10 * * * * /bin/bash /home/admin/shell-lab/01-system-monitor/system_check.sh >> /home/admin/shell-lab/03-cron-monitor/system_check.log 2>&1
