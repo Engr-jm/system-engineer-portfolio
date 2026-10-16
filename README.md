@@ -59,7 +59,7 @@ MacBook M1 Air (macOS)
 | 구분 | 진행 상태 |
 |---|---|
 | Linux 서버 구축 및 운영 | 완료 |
-| Shell Script 자동화 | 진행 중 (01~03 완료) |
+| Shell Script 자동화 | 완료 (01~04) |
 | Docker 컨테이너 환경 | 진행 예정 |
 | Kubernetes 운영 환경 | 진행 예정 |
 
@@ -207,6 +207,7 @@ LVM과 파일시스템은 서로 다른 계층으로 관리되며, 확장 후 �
 - [01. Linux 시스템 자원 점검 자동화](shell/01-system-monitor/README.md)
 - [02. Linux 로그 분석 자동화](shell/02-log-analysis/README.md)
 - [03. cron 기반 Linux 서버 정기 점검 자동화](shell/03-cron-monitor/README.md)
+- [04. Linux 서버 백업 자동화 및 복구 검증](shell/04-backup-automation/README.md)
 
 ### Docker
 
