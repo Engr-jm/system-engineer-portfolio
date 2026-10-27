@@ -1,0 +1,8 @@
+db.env
+.env
+.env.*
+*.pem
+*.key
+.git/
+__pycache__/
+*.pyc
