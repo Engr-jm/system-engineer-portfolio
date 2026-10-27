@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    container_name: onprem-app
+    restart: unless-stopped
+    ports:
+      - "192.168.144.20:8000:8000"
+    env_file:
+      - path: ./db.env
+        format: raw
