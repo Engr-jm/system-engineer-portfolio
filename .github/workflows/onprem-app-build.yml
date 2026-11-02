@@ -1,0 +1,40 @@
+name: Build On-Prem App
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'onprem-infrastructure/app/**'
+      - '.github/workflows/onprem-app-build.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check Python syntax
+        run: python3 -m py_compile onprem-infrastructure/app/app.py
+
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./onprem-infrastructure/app
+          push: true
+          tags: |
+            ghcr.io/engr-jm/onprem-app:latest
+            ghcr.io/engr-jm/onprem-app:${{ github.sha }}
