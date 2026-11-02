@@ -36,7 +36,6 @@ jobs:
           context: ./onprem-infrastructure/app
           push: true
           tags: |
-            ghcr.io/engr-jm/onprem-app:latest
             ghcr.io/engr-jm/onprem-app:${{ github.sha }}
 
 
