@@ -1,6 +1,6 @@
 services:
   app:
-    build: .
+    image: ghcr.io/engr-jm/onprem-app:latest
     container_name: onprem-app
     restart: unless-stopped
     ports:
