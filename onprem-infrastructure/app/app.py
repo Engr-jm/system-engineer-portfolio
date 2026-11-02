@@ -23,6 +23,8 @@ def health():
 
 @app.get("/ready")
 def ready():
+    return jsonify(app="test-failure", database="not-checked"), 503
+
     try:
         with connect_db() as conn:
             with conn.cursor() as cursor:
