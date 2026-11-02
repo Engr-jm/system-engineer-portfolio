@@ -69,7 +69,7 @@ def home():
     <body>
         <h1>On-Premise Infrastructure</h1>
         <p>WEB01 Nginx → APP01 Docker → DB01 MariaDB</p>
-
+        <p>GitHub Actions 자동 배포 테스트 성공!</p>
         <h2>방명록 작성</h2>
         <form method="POST">
             <input name="content" maxlength="255"
